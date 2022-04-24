@@ -1,0 +1,186 @@
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background: url('/public/member_img/space_tourist 1.png') center center/cover
+    no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.login-group {
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  width: 33%;
+  height: 100vh;
+  top: 0;
+  right: 110px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 84%;
+  padding-bottom: 2rem;
+}
+
+.login-header h1 {
+  color: #fff;
+  margin-bottom: 6rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.login-form {
+  width: 90%;
+  padding-bottom: 3rem;
+}
+
+.text-input {
+  margin-bottom: 1rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  line-height: 1.2rem;
+}
+
+.login-forgot-pwd {
+  width: 100%;
+  align-self: end;
+  margin-bottom: 2.4rem;
+}
+
+.login-forgot-pwd a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: right;
+  font-size: 0.5rem;
+}
+
+.login-btn-container {
+  width: 100%;
+
+}
+
+.login-or {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.login-or .bar {
+  flex: auto;
+  border: none;
+  height: 1px;
+  background: #aaa;
+}
+
+.login-or span {
+  color: #aaa;
+  padding: 0 0.8rem;
+  font-size: 0.5rem;
+}
+
+.login-google-btn {
+  margin-bottom: 1.5rem;
+}
+
+.login-google-btn i{
+  margin-right: 10px;
+  color: #fff;
+}
+
+
+.login-notyet {
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.login-notyet a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.5rem;
+}
+/* ======= BTN ====== */
+/* .login-primary-btn,
+.login-google-btn,
+.login-signup-btn {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  line-height: 1.2rem;
+  display: block;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 0.6rem;
+  border: 1px solid #05f2f2;
+  background: #05f2f2;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s;
+} */
+.login-primary-btn,
+.login-google-btn,
+.login-signup-btn {
+  position: relative;
+  background-color: #000000;
+  color: #05f2f2;
+  width: 100%;
+  padding: 5px;
+  line-height: 1.2rem;
+  font-size: 14px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: -30px 10px 20px #00000050;
+  transition: 0.3s ease-in-out;
+}
+.login-primary-btn:after,
+.login-google-btn:after,
+.login-signup-btn:after {
+  content: '';
+  width: 102%;
+  height: 126%;
+  border: 2px solid #05f2f2;
+  border-radius: 20px;
+  position: absolute;
+  top:-13%;
+  right: -1%;
+  transition: 0.3s ease-in-out;
+}
+.login-primary-btn:hover:after,
+.login-google-btn:hover:after,
+.login-signup-btn:hover:after{
+  box-shadow: 0 0 15px #05f2f281;
+}
+.login-primary-btn:hover,
+.login-google-btn:hover,
+.login-signup-btn:hover {
+  background-color: #05f2f2;
+  color: #000000;
+}
+.login-primary-btn:focus,
+.login-google-btn:focus,
+.login-signup-btn:focus {
+  outline: none;
+}
+
+
+.login-google-btn,
+.login-signup-btn {
+  background: rgba(0, 0, 0, 0.8);
+  color: #05f2f2;
+}

@@ -1,0 +1,174 @@
+
+@media (min-width: 1920px) {
+  .footercontainer {
+    max-width: 90rem;
+  }
+}
+@media (min-width: 992px) {
+  .footercontainer {
+    /* border: 1px solid white; */
+    width: 100%;
+    /* padding: 0 300px; */
+  }
+}
+
+.footercontainer .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.bg-footer {
+  background-image: url('/public/footer.png');
+  background-position: center center;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.footercontainer {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 0 auto;
+}
+
+.f1 {
+  padding: 65px 0px 0px;
+}
+
+.f2, .f3{
+  padding: 0px;
+}
+
+.f4 {
+  padding: 0px;
+}
+
+.f2-p, .f3-p, .f4-p{
+  font-size: 18px;
+}
+
+.f3-p{
+  margin: 0px 40px; 
+}
+
+.f5 {
+  text-align: right;
+  padding: 30px 140px 0px 0px;
+}
+
+.f5-p {
+  text-align: center;
+  display: flex;
+}
+
+.f5 a {
+  color: #acacac;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.f5 a:hover {
+  color: #1bbc9b;
+  text-decoration: none;
+}
+
+@media (min-width: 1920px) {
+  .f5 {
+    text-align: right;
+    padding: 30px 140px 0px 0px;
+  }
+
+  }
+
+.f6 {
+  text-align: center;
+}
+
+.list-unstyled li {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.footer-heading {
+  font-size: 40px;
+  color: white;
+}
+
+.footer-heading2 {
+  font-size: 21px;
+  color: #05f2f2;
+}
+
+.footer-link a {
+  color: #acacac;
+  line-height: 40px;
+  transition: all 0.5s;
+}
+
+.footer-link a:hover {
+  color: #1bbc9b;
+  text-decoration: none;
+}
+
+
+
+.footer-alt {
+  color: #acacac;
+  word-spacing: 40px;
+}
+
+.footer-heading2 {
+  position: relative;
+  padding-bottom: 12px;
+
+}
+
+.footer-heading2:after {
+  content: '';
+  width: 25px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  border-bottom: 1px solid #1bbc9b;
+}
+
+.footerrow{
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .footerrow {
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .footer-heading {
+    font-size: 48px;
+  }
+
+  .footer-heading2 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .footer-heading2:after {
+    border-bottom: 0px;
+  }
+
+  .f1 {
+    margin-bottom: 50px;
+    padding: 15px 0px 0px;;
+  }
+
+  .fa-brands {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 30px;
+    color: white;
+  }
+}

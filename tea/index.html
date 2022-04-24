@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500&family=Noto+Sans+TC:wght@500;700;900&family=Noto+Serif+TC:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500&family=Noto+Sans+TC:wght@500;700;900&family=Noto+Serif+TC:wght@300&family=Raleway:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .all-container {
+            min-width: 1349px;
+        }
+
+        /* 加盟回到上層開始 */
+        .slide-fixed-area {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 111px;
+            height: 210px;
+            background: url(./imgs/sideFixedImg.png);
+            z-index: 999;
+            transform: translateX(131px);
+            transition: all .5s;
+        }
+
+        /* 加盟回到上層結束 */
+
+        /* navbar樣式開始 */
+
+
+
+        h1>img {
+            width: 80%;
+        }
+
+        .nav-container {
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            transform: translateY(-90px);
+            transition: 1s;
+            box-shadow: 0 0 5px black;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: #232122;
+            color: white;
+            height: 90px;
+            /* border: 1px solid red; */
+        }
+
+        .nav-right {
+            flex-grow: 1;
+            /* border: 1px solid green; */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul:first-child {
+            margin-bottom: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 3%;
+        }
+
+        nav ul:first-child {
+            color: #ccc;
+        }
+
+        small>span {
+            margin: 0 10px;
+        }
+
+        /* navbar樣式結束 */
+        /*首圖樣式開始*/
+        .top-banner-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .top-banner-left {
+            background-image: url(./imgs/fvbg.jpg);
+            position: relative;
+            width: 60%;
+        }
+
+        .top-bn-left-img:first-child {
+            position: relative;
+            /* object-fit: cover; */
+            left: -120px;
+        }
+
+        .top-bn-left-img:not(.top-bn-left-img:first-child),
+        .top-bn-right-img {
+            position: absolute;
+
+        }
+
+        .top-bn-left-img:not(.top-bn-left-img:first-child) img {
+            animation: 3s flower-grow 1;
+        }
+
+        .top-bn-left-img:nth-child(2) {
+            top: 50%;
+            left: 25%;
+        }
+
+        .top-bn-left-img:nth-child(3) {
+            bottom: 20%;
+            left: 70%;
+        }
+
+        .top-bn-left-img:nth-child(4) {
+            bottom: 5%;
+            left: 15%;
+        }
+
+        .top-banner-right {
+            text-align: center;
+            background: url(./imgs/fvbg.jpg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            /* border: 1px solid green; */
+            flex-grow: 1;
+        }
+
+        .top-banner-right h2 {
+            margin: 5% 0;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            letter-spacing: 15px;
+        }
+
+        .top-banner-right img {
+            width: 40%;
+        }
+
+        .top-banner-right p {
+            margin: 0 auto;
+            width: 80%;
+            text-align: left;
+            padding: 5% 0;
+            border-top: 3px solid #444444;
+            border-bottom: 2px solid #444444;
+            line-height: 30px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .top-banner-right ul {
+            /* border: 1px solid red; */
+            margin-left: 10%;
+            margin-top: 3%;
+            text-align: left;
+            text-indent: 10px;
+        }
+
+        .top-banner-right span {
+            margin: 0 10px;
+        }
+
+        .top-banner-right ul li {
+            display: inline-block;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .top-bn-right-img1,
+        .top-bn-right-img2 {
+            position: absolute;
+        }
+
+        /*為何無法用偽類child??*/
+        .top-bn-right-img1 {
+            width: 40%;
+            top: 0;
+            right: 10%;
+            z-index: 9;
+        }
+
+        .top-bn-right-img2 {
+            width: 110%;
+            top: 0;
+            right: -260px;
+        }
+
+        /*首圖樣式結束*/
+        /* 最新消息開始 */
+        .new-area-container {
+            background: url(./imgs/newareabg.jpg);
+            display: flex;
+            justify-content: space-between;
+            padding: 5%;
+        }
+
+        .new-area-left,
+        .new-area-right {
+            width: 50%;
+            display: flex;
+        }
+
+        /* .new-area-left > div, .new-area-right > div {
+            
+        } */
+
+        .new-area-left>div:first-child,
+        .new-area-right>div:first-child {
+            border: 3px solid white;
+            width: 40%;
+        }
+
+        .new-area-info {
+            position: relative;
+        }
+
+        .new-area-info a {
+            position: absolute;
+            width: 150px;
+            bottom: 0;
+            padding: 4% 13%;
+            border-radius: 0%;
+            background-color: #af0d12;
+            color: white;
+            text-align: center;
+        }
+
+        .new-area-info a:after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+
+        }
+
+        .new-area-info a:hover {
+            background-color: black;
+        }
+
+        .new-area-info {
+            padding: 3%;
+        }
+
+        .new-area-info h3 {
+            padding: 2%;
+            border-bottom: 1px dashed black;
+        }
+
+        .new-area-info p {
+            font-size: 0.8rem;
+            padding: 5% 0;
+            color: rgb(105, 105, 105);
+        }
+
+        /* 最新消息結束 */
+        /*關於我們開始*/
+        .about-area-container {
+            position: relative;
+            display: flex;
+            background: url(./imgs/aboutbg.jpg);
+            padding: 8% 0 5% 7%;
+        }
+
+        .about-area-container>div:nth-child(2) {
+            width: 45%;
+        }
+
+        .about-area-container>div:nth-child(3) {
+            padding-left: 2%;
+        }
+
+        .flower {
+            width: 12%;
+            position: absolute;
+            top: 0;
+            left: 13%;
+            /* border: 1px solid red; */
+        }
+
+        .about-area-left {
+            position: relative;
+            z-index: 9;
+        }
+
+        .about-area-left:after {
+            content: "";
+            background-image: url(./imgs/about2.jpg);
+            background-size: contain;
+            width: 300px;
+            height: 340px;
+            position: absolute;
+            top: 10%;
+            left: -8%;
+            /* border: 1px solid red; */
+            z-index: -1;
+        }
+
+        .about-area-left p {
+            line-height: 1.8rem;
+        }
+
+        .about-area-left p:not(.about-area-left p:last-child) {
+            color: #a9997F;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.2rem;
+        }
+
+        .about-area-left p:nth-child(2) {
+            margin-bottom: 5%;
+        }
+
+        .about-area-left h4 {
+            font-size: 25px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            color: #444444;
+        }
+
+        .about-area-left h2 {
+            font-size: 50px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            margin-bottom: 5%;
+        }
+
+        .about-area-left h3 {
+            font-size: 30px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            letter-spacing: 5px;
+            margin-bottom: 3%;
+        }
+
+        /*關於我們結束*/
+        /* 茶業發展開始 */
+        .explore-container {
+            position: relative;
+            background: url(./imgs/explorebg.jpg);
+            background-size: 140% auto;
+            background-position: 45% 0;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 8% 5% 0 5%;
+            position: relative;
+            z-index: 99;
+        }
+
+        .explore-ani {
+            background: url(./imgs/explore-ani.jpg);
+            /* background-size: 240px auto; */
+            position: absolute;
+            top: 344px;
+            left: 133px;
+            /* opacity: .5; */
+            /* border: 1px solid red; */
+            height: 242px;
+            width: 254px;
+            overflow: hidden;
+            animation: tearun 1s infinite steps(12);
+        }
+
+        .explore-ani img {
+            width: 240px;
+        }
+
+        .explore-title {
+            writing-mode: vertical-rl;
+        }
+
+        .explore-container::before {
+            content: "";
+            width: 300px;
+            height: 300px;
+            background: url(./imgs/explore1.jpg);
+            background-size: contain;
+            position: absolute;
+            top: 8%;
+            right: 5%;
+            z-index: -1;
+        }
+
+        .explore-title h2 {
+            font-size: 50px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+        }
+
+        .explore-title p {
+            color: #a9997F;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.2rem;
+        }
+
+        .explore-title h4 {
+            font-size: 25px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            color: #444444;
+            padding-right: 5px;
+            letter-spacing: 5px;
+        }
+
+        .explore-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid red; */
+            align-items: center;
+        }
+
+        .explore-content>div {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .explore-content .explore-content-wrap {
+            width: 95%;
+            text-align: center;
+            margin-bottom: 20%;
+            justify-content: center;
+        }
+
+        .explore-pic {
+            width: 45%;
+            position: relative;
+            border-radius: 50%;
+            border: 2px solid rgba(13, 4, 9, 0.8);
+            margin: 0 auto;
+            margin-bottom: 5%;
+        }
+
+        .explore-pic::after {
+            content: "";
+            width: 92%;
+            height: 92%;
+            position: absolute;
+            top: 4%;
+            left: 4%;
+            border-radius: 50%;
+            border: 1px solid rgba(13, 4, 9, 0.8);
+            box-sizing: border-box;
+        }
+
+        .explore-content-wrap h4 span {
+            font-size: 35px;
+            font-weight: bold;
+            position: relative;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+        }
+
+        .explore-content-wrap h4 span::before {
+            content: "「";
+            position: absolute;
+            top: -15px;
+            left: -30px;
+            font-weight: normal;
+        }
+
+        .explore-content-wrap h4 {
+            font-size: 27px;
+            margin-bottom: 5%;
+            color: #444;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+        }
+
+        .explore-content p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.2rem;
+        }
+
+        /* 茶業發展結束 */
+        /* 關於茶開始 */
+        .tea-area-container {
+            background: url(./imgs/teabg.jpg);
+            padding: 10% 7%;
+        }
+
+        .tea-area-top {
+            display: flex;
+            margin-bottom: 10%;
+        }
+
+        .tea-title {
+            width: 30%;
+            position: relative;
+            z-index: 99;
+        }
+
+        .tea-title::after {
+            content: "";
+            width: 300px;
+            height: 300px;
+            background: url(./imgs/tea01.jpg);
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .tea-title p {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            color: #a9997F;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.2rem;
+        }
+
+        .tea-title h4 {
+            font-size: 20px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            color: #444444;
+            letter-spacing: 5px;
+        }
+
+        .tea-title h2 {
+            font-size: 50px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+        }
+
+        .tea-content {
+            width: 70%;
+        }
+
+        .tea-content h3 {
+            font-size: 28px;
+            letter-spacing: 5px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            margin-bottom: 3%;
+        }
+
+        .tea-content p {
+            line-height: 2rem;
+            margin-bottom: 8%;
+        }
+
+        .tea-content a {
+            position: relative;
+            width: 150px;
+            bottom: 0;
+            padding: 2% 12%;
+            border-radius: 0%;
+            background-color: #af0d12;
+            color: white;
+            text-align: center;
+        }
+
+        .tea-content a:after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+        }
+
+        .tea-content a:hover {
+            background-color: black;
+        }
+
+        .tea-area-bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 關於茶結束 */
+        /* 未來展望開始 */
+        .future-area-container {
+            display: flex;
+            /* padding: 50% 0; */
+        }
+
+        .future-area-wrap {
+            color: white;
+            width: 33.33%;
+            height: 100vh;
+            background: url(./imgs/future1.jpeg);
+            background-size: cover;
+            text-align: center;
+        }
+
+        .future-area-hover {
+            background-color: #000000a4;
+            width: 100%;
+            height: 100%;
+            padding: 20% 10%;
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        .future-area-wrap:hover .future-area-hover {
+            opacity: 1;
+        }
+
+        .future-area-wrap:nth-child(2) {
+            background: url(./imgs/future2.jpeg);
+            background-size: cover;
+        }
+
+        .future-area-wrap:nth-child(3) {
+            background: url(./imgs/future3.jpeg);
+            background-size: cover;
+        }
+
+        .future-area-wrap h2 {
+            font-size: 50px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            margin-bottom: 5%;
+        }
+
+        .future-area-wrap h4 {
+            font-size: 23px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Seri3f TC', serif;
+            font-weight: lighter;
+            letter-spacing: 5px;
+        }
+
+        .future-area-wrap p {
+            letter-spacing: 2px;
+            line-height: 2rem;
+            border: 1px dashed white;
+            border-left: 0;
+            border-right: 0;
+            padding: 5%;
+            margin: 5% 0;
+        }
+
+        .future-area-wrap a {
+            position: relative;
+            top: 15%;
+            width: 150px;
+            padding: 5% 25%;
+            background-color: #af0d12;
+            color: white;
+            text-align: center;
+        }
+
+        .future-area-wrap a::after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+        }
+
+        .future-area-wrap a:hover {
+            background-color: #000;
+        }
+
+        /* 未來展望結束 */
+        /* 會員資訊開始 */
+        .user-container {
+            background: url(./imgs/teabg.jpg);
+            padding: 10% 7%;
+            position: relative;
+            z-index: 99;
+        }
+
+        .user-container::after {
+            content: "";
+            width: 300px;
+            height: 300px;
+            background: url(./imgs/tea01.jpg);
+            background-size: contain;
+            position: absolute;
+            top: 15%;
+            left: 5%;
+            z-index: -1;
+        }
+
+        .user-title {
+            width: 30%;
+            position: relative;
+
+        }
+
+        .user-title p {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            color: #a9997F;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.2rem;
+        }
+
+        .user-title h4 {
+            font-size: 20px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            color: #444444;
+            letter-spacing: 5px;
+        }
+
+        .user-title h2 {
+            font-size: 50px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+        }
+
+        .user-flower {
+            width: 12%;
+            position: absolute;
+            top: 0;
+            left: 13%;
+        }
+
+        .user-icon {
+            width: 50%;
+            position: relative;
+            padding: 0 10% 10% 10%;
+            box-sizing: border-box;
+        }
+
+        .user-icon::after {
+            content: "";
+            width: 24px;
+            height: 2px;
+            background-color: #260f00;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 12px);
+        }
+
+        .user-content-area {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            height: fit-content;
+            /* border: 1px solid red; */
+            margin: 0 0 5% 0;
+        }
+
+        .user-content {
+            display: flex;
+            width: 33.33%;
+            flex-direction: column;
+            align-items: center;
+            padding: 5% 0;
+        }
+
+        .user-content:nth-child(2) {
+            border: 1px solid rgba(188, 183, 178, 0.5);
+            border-top: 0;
+            border-bottom: 0;
+            ;
+        }
+
+        .user-content h4 {
+            font-size: 20px;
+            color: #222;
+            margin: 10% 0;
+        }
+
+        .user-content p {
+            font-size: 14px;
+            color: #8a7e6d;
+        }
+
+        .user-signup {
+            position: relative;
+            width: 150px;
+            bottom: 0;
+            padding: 1.5% 12%;
+            border-radius: 0%;
+            background-color: #af0d12;
+            color: white;
+            text-align: center;
+        }
+
+        .user-signup::after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+        }
+
+        .user-login {
+            position: relative;
+            width: 150px;
+            bottom: 0;
+            padding: 1.5% 12%;
+            border-radius: 0%;
+            background-color: #af0d1200;
+            color: #666;
+            text-align: center;
+            border: 1px solid rgba(13, 4, 9, 0.5);
+        }
+
+        .user-login::after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(13, 4, 9, 0.5);
+            box-sizing: border-box;
+        }
+
+        .user-login:hover,
+        .user-signup:hover {
+            background-color: #000000;
+        }
+
+        /*偽類hover無效?*/
+        .user-login::after:hover {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
+
+        .user-login-example {
+            width: 25%;
+            position: absolute;
+            right: 10%;
+            bottom: -13%;
+            z-index: 99999;
+        }
+
+        /* 會員資訊結束 */
+
+        /* 地圖開始 */
+        .map-container {
+            background: url(./imgs/mapbg.jpg);
+            padding: 10% 0;
+            position: relative;
+            z-index: 9;
+        }
+
+        .map-container::after {
+            content: "";
+            background: url(./imgs/map.png) no-repeat;
+            background-size: contain;
+            background-position: center 80%;
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            margin-left: 10%;
+            /* border: 1px solid red; */
+            z-index: -1;
+        }
+
+        .map-title {
+            writing-mode: vertical-rl;
+            margin: 0 auto;
+        }
+
+        .map-title p {
+            color: #a9997F;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.2rem;
+        }
+
+        .map-title h2 {
+            font-size: 50px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: normal;
+            letter-spacing: 5px;
+        }
+
+        .map-title h4 {
+            font-size: 20px;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: lighter;
+            color: #444444;
+            letter-spacing: 5px;
+            text-align: end;
+            margin-right: 2%;
+            margin-bottom: 15px;
+        }
+
+        .map-content {
+            width: 40%;
+            margin: 10% auto;
+            line-height: 2rem;
+            color: #444444;
+        }
+
+        .map-button-area {
+            text-align: center;
+        }
+
+        .search {
+            position: relative;
+            width: 150px;
+            bottom: 0;
+            padding: 1.5% 8%;
+            border-radius: 0%;
+            background-color: #af0d12;
+            color: white;
+            text-align: center;
+        }
+
+        .search::after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+        }
+
+        .joinUs {
+            position: relative;
+            width: 150px;
+            bottom: 0;
+            padding: 1.5% 8%;
+            border-radius: 0%;
+            background-color: #af0d1200;
+            color: #666;
+            text-align: center;
+            border: 1px solid rgba(13, 4, 9, 0.5);
+        }
+
+        .joinUs::after {
+            content: "";
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            bottom: 0;
+            left: 4px;
+            top: 4px;
+            border: 1px solid rgba(13, 4, 9, 0.5);
+            box-sizing: border-box;
+        }
+
+        .search:hover,
+        .joinUs:hover {
+            background-color: #000000;
+        }
+
+        /* 地圖結束 */
+        /* footer開始 */
+        footer {
+            background: url(./imgs/footerbg.jpg);
+            padding: 5% 0;
+        }
+
+        .logo {
+            width: 15%;
+            margin: 0 auto;
+        }
+
+        .contact-area {
+            display: flex;
+            width: 40%;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: white;
+            margin: 3% auto;
+            border-top: 1px solid #888888;
+            padding: 16px 0;
+        }
+
+        .contact-area p {
+            padding: 0 5px;
+            line-height: 2rem;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .contact-area span {
+            color: #888888;
+            font-size: 12px;
+        }
+
+        .sns-area {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5%;
+        }
+
+        .sns-area a {
+            margin: 0 20px;
+            color: #888888;
+        }
+
+        .copy-right {
+            color: #888888;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* footer結束*/
+        @keyframes flower-grow {
+            from {
+                transform: scale(0, 0);
+            }
+
+            to {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes tearun {
+            from {
+                background-position: 0 0;
+            }
+
+            99.9%,
+            to {
+                background-position: 0 -2904px;
+            }
+        }
+
+        /* RWD */
+        @media screen and (min-width: 1350px),
+        screen and (max-width: 1348px) {
+            .explore-ani {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all-container">
+        <!-- 加盟回到上層開始 -->
+        <div class="slide-fixed-area">
+            <div class="business"></div>
+            <div class="go-top"></div>
+        </div>
+        <!-- 加盟回到上層結束 -->
+        <!-- navbar開始-->
+        <div class="nav-container">
+            <nav>
+                <h1><img src="./imgs/logo.png" alt=""></h1>
+                <div class="nav-right">
+                    <ul>
+                        <li>
+                            <i class="fab fa-facebook-square"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-line"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                        </li>
+                        <li>
+                            <small>
+                                繁體版<span>/</span>簡體版<span>/</span>English</small>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>最新消息</li>
+                        <li>瞭解茶湯</li>
+                        <li>茶湯點單</li>
+                        <li>嚴選食材</li>
+                        <li>門市專區</li>
+                        <li>加盟專區</li>
+                        <li>菁英招募</li>
+                        <li>會員卡專區</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar結束-->
+        <!-- 首圖開始-->
+        <div class="top-banner-container">
+            <div class="top-banner-left">
+                <div class="top-bn-left-img"><img src="./imgs/topbn1.jpeg" alt=""></div>
+                <div class="top-bn-left-img"><img src="./imgs/topbn2.png" alt=""></div>
+                <div class="top-bn-left-img"><img src="./imgs/topbn3.png" alt=""></div>
+                <div class="top-bn-left-img"><img src="./imgs/topbn4.png" alt=""></div>
+            </div>
+            <div class="top-banner-right">
+                <h1><a href="" title="茶湯會TP-TEA │ 外帶茶飲第一品牌"><img src="./imgs/logo1.png" alt=""></a>
+                </h1>
+                <h2>創立於乙酉年</h2>
+                <p>三十年茶湯硬底子，品選茶葉真功夫。<br>
+                    堅持以茶會友的初衷，為您真心做到最好。<br>
+                    提供最用心的幸福好茶，感受每一杯的人情滋味。</p>
+                <ul>
+                    <li>LANGUAGE</li>
+                    <li>繁體版</li><span>/</span>
+                    <li>簡体版</li><span>/</span>
+                    <li>English</li>
+                </ul>
+                <div class="top-bn-right-img1"><img src="./imgs/topbn5.png" alt=""></div>
+                <div class="top-bn-right-img2"><img src="./imgs/topTree.png" alt=""></div>
+            </div>
+        </div>
+        <!-- 首圖結束-->
+        <!-- 最新消息開始 -->
+        <div class="new-area-container">
+            <div class="new-area-left wow fadeIn" data-wow-duration="1.5s">
+                <div title="2022春節期間 營業時間"><img src="./imgs/newarea1.jpeg" alt=""></div>
+                <div class="new-area-info">
+                    <h3 title="2022春節期間 營業時間">2022春節期間 營業時間</h3>
+                    <p>新春時節走走春，茶湯會的營業時間這裡看</p>
+                    <a>瞭解更多</a>
+                </div>
+            </div>
+            <div class="new-area-right wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1s">
+                <div title="【禧虎迎幸福】春節活動"><img src="./imgs/newarea2.jpeg" alt=""></div>
+                <div class="new-area-info">
+                    <h3 title="【禧虎迎幸福】春節活動">【禧虎迎幸福】春節活動</h3>
+                    <p>【跨界聯名】茶湯會 Ⅹ 台中樂成宮旱溪媽祖廟</p>
+                    <a>瞭解更多</a>
+                </div>
+            </div>
+        </div>
+        <!-- 最新消息結束 -->
+        <!-- 關於我們開始 -->
+        <div class="about-area-container">
+            <div class="flower"><img src="./imgs/about1.jpg" alt=""></div>
+            <div class="about-area-left">
+                <p class="wow fadeInLeft" data-wow-duration="2s">Creativity</p>
+                <p class="wow fadeInLeft" data-wow-duration="2s">Revolution of Tea</p>
+                <h4 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">一杯茶，怎樣才叫好</h4>
+                <h2 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1.2s">相遇篇</h2>
+                <h3 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">一杯幸福茶，一份人情味。</h3>
+                <p class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
+                    這是茶湯會的訴求與期望，不僅可以喝到幸福茶，更要讓真心調和推往更遠的各地，讓幸福的茶品讓更多人回甘。秉持著「以茶會友」的本念啟動了茶湯會。理想與熱情之外，為了滿足我們的「不滿足」，大膽的踏出縝密的每一步，希望可以更包容、更創新，顛覆千年的飲茶方式，承續現有的模式，更廣也更深入將熱茶冷飲風潮延伸下去！
+                </p>
+            </div>
+            <div class="about-area-right">
+                <img src="./imgs/about3.png" alt="">
+            </div>
+        </div>
+        <!-- 關於我們結束 -->
+        <!-- 茶業發展開始 -->
+        <div class="explore-container">
+            <div class="explore-title">
+                <div class="explore-ani"></div>
+                <h2 class="wow fadeInRight" data-wow-duration="1s">調和篇</h2>
+                <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">Creativity Revolution of Tea</p>
+                <h4 class="wow fadeInRight" data-wow-duration="2s" data-wow-delay=".8s">貼近生活的調茶藝術</h4>
+            </div>
+            <div class="explore-content">
+                <div class="explore-content-left">
+                    <div class="explore-content-wrap wow fadeIn" data-wow-duration="2s" data-wow-delay=".8s">
+                        <div class="explore-pic"><img src="./imgs/explore2.png" alt=""></div>
+                        <h4><span>茶</span>與茶」</h4>
+                        <p>掌握各式各樣茶葉的特性與不同的調泡方式，依各自獨特的風味，搭配精心嚴選的配料食材，調泡出獨家特色商品</p>
+                    </div>
+                    <div class="explore-content-wrap wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">
+                        <div class="explore-pic"><img src="./imgs/explore3.png" alt=""></div>
+                        <h4><span>人</span>與人」</h4>
+                        <p>以茶會友，伴隨著親切招呼的互動，雙手奉上一杯幸福茶，讓茶友們每一口回甘，喝到的是滿滿的人情味</p>
+                    </div>
+                </div>
+                <div class="explore-content-right wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+                    <div class="explore-content-wrap">
+                        <div class="explore-pic"><img src="./imgs/explore3.png" alt=""></div>
+                        <h4><span>茶</span>與人」</h4>
+                        <p>重視員工成長教育，規畫調茶評鑑、口語禮儀等專業訓練課程，並不定期安排主題講座，建立全方位的人文環境，期許員工一同成長前進</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 茶業發展結束 -->
+        <!-- 關於茶開始 -->
+        <div class="tea-area-container">
+            <div class="tea-area-top">
+                <div class="tea-title">
+                    <p class="wow fadeIn" data-wow-duration="1s">Creativity<br>Revolution of Tea</p>
+                    <h4 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">品嘗美好幸福的起點</h4>
+                    <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">分享篇</h2>
+                </div>
+                <div class="tea-content wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+                    <h3>重新認識 什麼是「茶」。</h3>
+                    <p>三十年茶湯硬底子，品選茶葉真功夫。堅持卓越的信念，為您真心做到最好。提供最創新、純粹、優質的用心好茶，感動每~個品嘗的味蕾。「好茶不需濃妝豔抹。」每一杯茶飲研發都融入了多年調茶專業的判斷，每一步驟都經過嚴格的重重把關，每一口都感受的到濃濃的人情溫度。
+                    </p>
+                    <a href="">查看飲品菜單</a>
+                </div>
+            </div>
+            <div class="tea-area-bottom">
+                <div class="tea-content wow fadeIn" data-wow-duration="2s"><img src="./imgs/tea2.jpeg" alt=""></div>
+                <div class="tea-content wow fadeIn" data-wow-duration="2s" data-wow-delay=".5s"><img
+                        src="./imgs/tea3.jpeg" alt=""></div>
+                <div class="tea-content wow fadeIn" data-wow-duration="2s" data-wow-delay="1s"><img
+                        src="./imgs/tea4.jpeg" alt=""></div>
+
+            </div>
+        </div>
+        <!-- 關於茶結束 -->
+        <!-- 未來展望開始 -->
+        <div class="future-area-container">
+            <div class="future-area-wrap">
+                <div class="future-area-hover">
+                    <h2>好茶</h2>
+                    <h4>嚴格把關每一道工序</h4>
+                    <p>從產地到製程，嚴格把關每一道工序，並細心選用各式各樣的茶葉品種，充分掌握其特性與適當的調泡手法，搭配多樣百變的配料食材，凸顯不同茶品其獨特的口感香氣，調泡出獨家特色商品。</p>
+                    <a href="">了解更多</a>
+                </div>
+            </div>
+            <div class="future-area-wrap">
+                <div class="future-area-hover">
+                    <h2>人情</h2>
+                    <h4>一期一會的真誠感動</h4>
+                    <p>茶湯會用心接承這一份以茶遞情的美好，嚴選每一款好茶，堅持每一杯現調。在競爭激烈、千變萬化的外帶茶飲市場中，始終秉持以真心調和令人回甘的幸福茶。</p>
+                    <a href="">了解更多</a>
+                </div>
+            </div>
+            <div class="future-area-wrap">
+                <div class="future-area-hover">
+                    <h2>職人</h2>
+                    <h4>專業判斷 精準調控</h4>
+                    <p>每款幸福上癮的好茶，由歷經數十年調茶經驗的研發團隊專業判斷、反覆測試，精準調控比例的穠纖合度，完美襯托茶感的迷人風味，成就無可取代的好茶滋味。</p>
+                    <a href="">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <!-- 未來展望結束 -->
+        <!-- 會員資訊開始 -->
+        <div class="user-container">
+            <div class="flower"><img src="./imgs/user-flower.jpg" alt=""></div>
+            <div class="user-title">
+                <p class="wow fadeIn" data-wow-duration="1s">Creativity<br>Revolution of Tea</p>
+                <h4 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">享受你我的飲茶日常</h4>
+                <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">日常篇</h2>
+            </div>
+            <div class="user-content-area">
+                <div class="user-content wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".5s">
+                    <div class="user-icon"><img src="./imgs/user1.png" alt=""></div>
+                    <h4>會員集點優惠</h4>
+                    <p>1點折抵現金1元，</p>
+                    <p>不限杯數、金額皆可折。</p>
+                </div>
+                <div class="user-content wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".8s">
+                    <div class="user-icon"><img src="./imgs/user2.png" alt=""></div>
+                    <h4>網路登錄註冊</h4>
+                    <p>享即時線上點數查詢、</p>
+                    <p>掛失點數轉移之消費保障。</p>
+                </div>
+                <div class="user-content wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1s">
+                    <div class="user-icon"><img src="./imgs/user3.png" alt=""></div>
+                    <h4>入會好禮</h4>
+                    <p>好禮優惠不定期更新。</p>
+                </div>
+            </div>
+            <a class="user-signup" href="">註冊會員</a>
+            <a class="user-login" href="">會員登入</a>
+            <div class="user-login-example wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">
+                <img src="./imgs/user4.png" alt="">
+            </div>
+        </div>
+        <!-- 會員資訊結束 -->
+        <!-- 地圖開始 -->
+        <div class="map-container">
+            <div class="map-title">
+                <p class="wow fadeIn" data-wow-duration="1s">Creativity</p>
+                <p class="wow fadeIn" data-wow-duration="1s">Revolution of Tea</p>
+                <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">久等了</h2>
+                <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">與世界分享</h2>
+                <h4 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">引領世界茶飲風潮</h4>
+            </div>
+            <div class="map-content">
+                <p class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+                    茶湯會將迎向全球市場，跨足海外。於2016年香港插旗展店，獲得各方好評，2017年前進上海，踏入華東地區，2018年拓展到日本、新加坡和美國區域，2020年邁向加拿大、泰國、菲律賓等地，未來將逐步擴展至東南亞、東北亞、歐美市場，讓茶湯會飲品深入世界的每一個角落。
+                </p>
+            </div>
+            <div class="map-button-area">
+                <a class="search" href="">尋找門市</a>
+                <a class="joinUs" href="">加入我們</a>
+            </div>
+
+
+        </div>
+        <!-- 地圖結束 -->
+        <!-- footer開始 -->
+        <footer>
+            <div class="logo"><img src="./imgs/logo.png" alt=""></div>
+            <div class="contact-area">
+                <p><span>電話&nbsp;</span>
+                    886-4-2389-6909 <span>&nbsp;/&nbsp;</span></p>
+                <p><span>傳真&nbsp;</span>
+                    886-4-23894277 <span>&nbsp;/&nbsp;</span></p>
+                <p><span>加盟/客服專線&nbsp;</span>
+                    0800-800533</p>
+                <p><span>地址&nbsp;</span>
+                    台中市南屯區龍富路三段565號2樓之1 <span>&nbsp;/&nbsp;</span></p>
+                <p>連絡我們&nbsp;<i class="far fa-envelope"></i></p>
+            </div>
+            <div class="sns-area">
+                <a href=""><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href=""><i class="fab fa-line fa-2x"></i></a>
+                <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <p class="copy-right">TP TEA 2017 © Copyright All Rights Reserved.</p>
+        </footer>
+    </div>
+    <!-- footer結束 -->
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $(".nav-container").css("transform", "translateY(0)");
+            } else {
+                $(".nav-container").css("transform", "translateY(-90px)");
+            }
+        })
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $(".slide-fixed-area").css("transform", "translateX(0)");
+            } else {
+                $(".slide-fixed-area").css("transform", "translateX(131px)");
+            }
+        })
+
+
+        new WOW().init();
+    </script>
+</body>
+
+</html>

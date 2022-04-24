@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf8"?>
+<table>
+    <record>
+        <imgname>icon1</imgname>
+        <star>★★★★☆</star>
+        <comment>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero placeat at aliquam eligendi incidunt temporibus voluptates possimus repellat doloremque voluptatem accusantium excepturi, aut perferendis necessitatibus!
+        </comment>
+    </record>
+    <record>
+        <imgname>icon2</imgname>
+        <star>★★★★☆</star>
+        <comment>Quisquam laborum nesciunt voluptatum qui aspernatur alias eius sequi delectus accusantium? Cum eum numquam quaerat, illum odio totam ipsa assumenda cupiditate molestiae voluptatem, excepturi corporis.
+        </comment>
+    </record>
+    <record>
+        <imgname>icon3</imgname>
+        <star>★★★☆☆</star>
+        <comment>Dicta optio dolorum perferendis placeat ut velit repellendus fugit ad iste adipisci incidunt nam porro ullam quia quam minima blanditiis, reiciendis ex. Nesciunt, minus, saepe.
+        </comment>
+    </record>
+    <record>
+        <imgname>icon4</imgname>
+        <star>★★★★☆</star>
+        <comment>Odio earum aliquid sed reiciendis numquam libero sit eum consectetur expedita, dolore possimus unde doloremque reprehenderit ea aspernatur. Odio aperiam explicabo ratione corrupti, voluptates esse!
+        </comment>
+    </record>
+    <record>
+        <imgname>icon5</imgname>
+        <star>★★★☆☆</star>
+        <comment>Suscipit asperiores vitae autem aliquam sunt voluptatem doloribus, similique deserunt hic, consectetur laudantium dolore magnam. Repudiandae odio aut impedit a, illo id possimus quis magni!
+        </comment>
+    </record>
+    <record>
+        <imgname>icon6</imgname>
+        <star>★★★★★</star>
+        <comment>Fugiat, eum nihil saepe rem. Laborum, voluptatem cumque illum ullam veniam nesciunt earum labore deleniti architecto quisquam distinctio unde. Ipsam quidem inventore rerum, ducimus vitae.
+        </comment>
+    </record>
+    <record>
+        <imgname>icon7</imgname>
+        <star>★★★★★</star>
+        <comment>Explicabo quia beatae corrupti earum, nisi magnam error repellat! Nulla consectetur incidunt, vel, tenetur sint laudantium, officia in quo qui porro provident unde accusantium! Minima.
+        </comment>
+    </record>
+    <record>
+        <imgname>icon8</imgname>
+        <star>★★★★★</star>
+        <comment>Eos enim, maiores nulla, nam tempore ullam ad. Ullam fuga dolore sequi, incidunt explicabo rem consequatur, repellendus nemo sit omnis dolorum consequuntur earum voluptatem porro!
+        </comment>
+    </record>
+    <record>
+        <imgname>icon9</imgname>
+        <star>★★★★☆</star>
+        <comment>Commodi nobis recusandae cupiditate et fugiat maiores unde rem suscipit quae, assumenda adipisci sequi inventore ex harum explicabo tempora magni dolore voluptate vero! Unde, ullam.
+        </comment>
+    </record>
+    <record>
+        <imgname>icon10</imgname>
+        <star>★★★★☆</star>
+        <comment>Id quia ex eius quibusdam minima facere est ut, impedit, magni tenetur provident excepturi illo sed dolor quidem. Facere molestiae vel officiis, quis, illum vitae.
+        </comment>
+    </record>
+</table>

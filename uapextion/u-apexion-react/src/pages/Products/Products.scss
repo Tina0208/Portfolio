@@ -1,0 +1,956 @@
+//@import '~bootstrap/scss/bootstrap.scss';
+.pr {
+    .pr-h9vh {
+        width           : 100%;
+        height          : 9vh;
+        background-color: black;
+        display         : inline-block;
+    }
+
+    @media screen and (max-width:390px) {
+        .pr-h9vh {
+            width           : 100%;
+            height          : 5vh;
+            background-color: black;
+            display         : inline-block;
+        }
+    }
+
+    /* 第1段--------------------------------------------------------------------------------------- */
+
+    .pr-home-mv-img {
+        position: relative;
+
+        >.pr-home-mv-p {
+            margin-top: 20%;
+            position  : absolute;
+            width     : 100%;
+            text-align: center;
+
+            >.pr-home-h2 {
+                font-weight   : 900;
+                font-size     : 96px;
+                color         : white;
+                line-height   : 140%;
+                text-transform: capitalize;
+                text-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.35);
+            }
+
+            >.pr-home-p1 {
+                font-size     : 50px;
+                text-align    : center;
+                text-transform: capitalize;
+                color         : #FFFFFF;
+                text-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.35);
+            }
+
+            >.pr-home-p2 {
+                font-size     : 36px;
+                line-height   : 140%;
+                text-align    : center;
+                text-transform: capitalize;
+                color         : #FFFFFF;
+                text-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.35);
+            }
+        }
+
+        >&.img {
+            width     : 100%;
+            Object-fit: contain;
+        }
+    }
+
+    @media screen and (max-width:390px) {
+        .pr-home-mv-img {
+            position: relative;
+
+            >.pr-home-mv-p {
+
+                position  : absolute;
+                width     : 100%;
+                text-align: center;
+
+                >.pr-home-h2 {
+                    margin           : 0px;
+                    font-weight      : 900;
+                    font-size        : 20px;
+                    color            : white;
+                    // text-transform: capitalize;
+                    text-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.35);
+                }
+
+                >.pr-home-p1 {
+                    margin           : 0px;
+                    padding          : 0px;
+                    font-size        : 14px;
+                    text-align       : center;
+                    // text-transform: capitalize;
+                    color            : #FFFFFF;
+                    text-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.35);
+                }
+
+                >.pr-home-p2 {
+                    font-size        : 14px;
+                    text-align       : center;
+                    padding          : 0px;
+                    // text-transform: capitalize;
+                    color            : #FFFFFF;
+                    text-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.35);
+                }
+            }
+
+        }
+    }
+
+    /* 第2段時裝照--------------------------------------------------------------------------------------- */
+    @media screen and (min-width:390px) {
+        .pr-home-fashion-img {
+            padding        : 0 2vh;
+            margin         : 3vh 0px;
+            width          : 100%;
+            display        : flex;
+            position       : relative;
+            justify-content: space-between;
+            align-items    : stretch;
+
+            >.pr-home-fashion-div {
+                display       : flex;
+                flex-direction: row-reverse;
+                margin-right  : 9%;
+
+                >.pr-home-fashion-svg {
+                    position: relative;
+                }
+
+                >.pr-home-fashion-txt {
+
+                    position: absolute;
+
+                    >.pr-home-fashion-h2 {
+                        color      : #FFFFFF;
+                        font-size  : 70px;
+                        line-height: 1.3em;
+                    }
+
+                    >.pr-home-fashion-p {
+                        color    : #FFFFFF;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .slider_container {
+                display                  : block;
+                margin-left              : 2%;
+                margin-top               : 2%;
+                height                   : 100vh;
+                // top                   : 2%;
+                width                    : 35%;
+                position                 : relative;
+
+            }
+
+            .slider_container div {
+                position: absolute;
+
+                width  : 100%;
+                top    : 0;
+                left   : 0;
+                opacity: 0;
+                filter : alpha(opacity=0);
+
+                >img {
+                    width: 100%;
+                }
+            }
+
+            // 設定動畫週期
+            .slider_container div {
+                -webkit-animation: round 15s linear infinite;
+                animation        : round 15s linear infinite;
+            }
+
+            @-webkit-keyframes round {
+                4% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 0 - 1秒 淡入*/
+                }
+
+                20% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 1- 5秒靜止*/
+                }
+
+                24% {
+                    opacity: 0;
+                    filter : alpha(opacity=0);
+                    /* 5-6秒淡出*/
+                }
+            }
+
+            @keyframes round {
+                4% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 0 - 1秒 淡入*/
+                }
+
+                20% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 1- 5秒靜止*/
+                }
+
+                24% {
+                    opacity: 0;
+                    filter : alpha(opacity=0);
+                    /* 5-6秒淡出*/
+                }
+            }
+
+            //每張圖片進場時間相隔5秒
+            .slider_container div:nth-child(5) {
+                -webkit-animation-delay: 0s;
+                animation-delay        : 0s;
+            }
+
+            .slider_container div:nth-child(4) {
+                -webkit-animation-delay: 3s;
+                animation-delay        : 3s;
+            }
+
+            .slider_container div:nth-child(3) {
+                -webkit-animation-delay: 6s;
+                animation-delay        : 6s;
+            }
+
+            .slider_container div:nth-child(2) {
+                -webkit-animation-delay: 9s;
+                animation-delay        : 9s;
+            }
+
+            .slider_container div:nth-child(1) {
+                -webkit-animation-delay: 12s;
+                animation-delay        : 12s;
+            }
+
+            .slider_container2 {
+                top     : 24%;
+                left    : 35%;
+                width   : 26%;
+                height  : 73vh;
+                position: absolute;
+            }
+
+            .slider_container2>div {
+                position    : absolute;
+                border      : 10px solid;
+                border-color: #fff;
+                width       : 100%;
+                top         : 0;
+                left        : 0;
+                opacity     : 0;
+                filter      : alpha(opacity=0);
+                overflow    : hidden;
+                box-shadow  : #666 0 0 5px;
+
+                >img {
+                    width     : 100%;
+                    height    : 100%;
+                    Object-fit: contain;
+                }
+            }
+
+            // 設定動畫週期
+            .slider_container2 div {
+                -webkit-animation: round 15s linear infinite;
+                animation        : round 15s linear infinite;
+            }
+
+            @-webkit-keyframes round {
+                4% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 0 - 1秒 淡入*/
+                }
+
+                20% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 1- 5秒靜止*/
+                }
+
+                24% {
+                    opacity: 0;
+                    filter : alpha(opacity=0);
+                    /* 5-6秒淡出*/
+                }
+            }
+
+            @keyframes round {
+                4% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 0 - 1秒 淡入*/
+                }
+
+                20% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 1- 5秒靜止*/
+                }
+
+                24% {
+                    opacity: 0;
+                    filter : alpha(opacity=0);
+                    /* 5-6秒淡出*/
+                }
+            }
+
+            //每張圖片進場時間相隔5秒
+            .slider_container2 div:nth-child(5) {
+                -webkit-animation-delay: 0s;
+                animation-delay        : 0s;
+            }
+
+            .slider_container2 div:nth-child(4) {
+                -webkit-animation-delay: 3s;
+                animation-delay        : 3s;
+            }
+
+            .slider_container2 div:nth-child(3) {
+                -webkit-animation-delay: 6s;
+                animation-delay        : 6s;
+            }
+
+            .slider_container2 div:nth-child(2) {
+                -webkit-animation-delay: 9s;
+                animation-delay        : 9s;
+            }
+
+            .slider_container2 div:nth-child(1) {
+                -webkit-animation-delay: 12s;
+                animation-delay        : 12s;
+            }
+
+            .slider_container3 {
+                top       : 23%;
+                right     : 7%;
+                width     : 28%;
+                height    : 38vh;
+                position  : absolute;
+            }
+
+            .slider_container3 div {
+                position: absolute;
+                width   : 100%;
+                top     : 0;
+                left    : 0;
+                opacity : 0;
+                filter  : alpha(opacity=0);
+
+                >img {
+                    width     : 100%;
+                    height    : 100%;
+                    Object-fit: contain;
+                }
+            }
+
+            // 設定動畫週期
+            .slider_container3 div {
+                -webkit-animation: round 15s linear infinite;
+                animation        : round 15s linear infinite;
+            }
+
+            @-webkit-keyframes round {
+                4% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 0 - 1秒 淡入*/
+                }
+
+                20% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 1- 5秒靜止*/
+                }
+
+                24% {
+                    opacity: 0;
+                    filter : alpha(opacity=0);
+                    /* 5-6秒淡出*/
+                }
+            }
+
+            @keyframes round {
+                4% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 0 - 1秒 淡入*/
+                }
+
+                20% {
+                    opacity: 1;
+                    filter : alpha(opacity=100);
+                    /* 1- 5秒靜止*/
+                }
+
+                24% {
+                    opacity: 0;
+                    filter : alpha(opacity=0);
+                    /* 5-6秒淡出*/
+                }
+            }
+
+            //每張圖片進場時間相隔5秒
+            .slider_container3 div:nth-child(5) {
+                -webkit-animation-delay: 0s;
+                animation-delay        : 0s;
+            }
+
+            .slider_container3 div:nth-child(4) {
+                -webkit-animation-delay: 3s;
+                animation-delay        : 3s;
+            }
+
+            .slider_container3 div:nth-child(3) {
+                -webkit-animation-delay: 6s;
+                animation-delay        : 6s;
+            }
+
+            .slider_container3 div:nth-child(2) {
+                -webkit-animation-delay: 9s;
+                animation-delay        : 9s;
+            }
+
+            .slider_container3 div:nth-child(1) {
+                -webkit-animation-delay: 12s;
+                animation-delay        : 12s;
+            }
+        }
+
+        .pr-pic-ctn {
+            display: none;
+        }
+
+    }
+
+    // --------時裝手機版--------------------------------------------------------------------------------------------------------
+    @media screen and (max-width:390px) {
+        .pr-home-fashion-img {
+            display: none;
+        }
+
+        .pr-pic-ctn {
+            width   : 78%;
+            height  : 500px;
+            margin  : 13px auto;
+            overflow: hidden;
+
+            >.pr-sp-fashion-div {
+                display : flex;
+                position: relative;
+
+                >.pr-sp-fashion-txt {
+                    margin-left: 20px;
+                    position   : absolute;
+
+                    >.pr-sp-fashion-h2 {
+                        color      : rgb(255, 255, 255);
+                        font-size  : 30px;
+                        line-height: 1.3em;
+                    }
+
+                    >.pr-sp-fashion-p {
+                        color    : rgb(255, 255, 255);
+                        font-size: 12px;
+                    }
+                }
+            }
+
+
+            .pic-ctn {
+                margin  : 15px 0;
+                position: relative;
+                width   : 100%;
+            }
+        }
+
+        .pic-ctn>img {
+            position  : absolute;
+            top       : 0;
+            opacity   : 0;
+            animation : display 10s infinite;
+            Object-fit: contain;
+        }
+
+
+        @keyframes display {
+            0% {
+                transform: translateX(200px);
+                opacity  : 0;
+            }
+
+            10% {
+                transform: translateX(0);
+                opacity  : 1;
+            }
+
+            20% {
+                transform: translateX(0);
+                opacity  : 1;
+            }
+
+            30% {
+                transform: translateX(-200px);
+                opacity  : 0;
+            }
+
+            100% {
+                transform: translateX(-200px);
+                opacity  : 0;
+            }
+        }
+
+
+        img:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        img:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        img:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        img:nth-child(5) {
+            animation-delay: 8s;
+        }
+    }
+
+    // --------------------新品----------------------------------------------------------
+
+    .pr-home-new {
+        width      : 100%;
+        display    : flex;
+        align-items: center;
+
+        >.pr-home-new-img-photo {
+            width   : 43%;
+            overflow: hidden;
+
+            >img {
+                Object-fit: contain;
+            }
+        }
+
+        >.pr-home-new-list {
+            width: 57%;
+
+            >h3 {
+                text-align: center;
+                color     : white;
+                font-size : 36px;
+                margin    : auto;
+            }
+
+            >.pr-card-new {
+                display           : flex;
+                flex-wrap         : wrap;
+                //justify-content : space-around;
+                justify-content   : center;
+                padding           : 2% 5%;
+
+
+                >.pr-card-list {
+                    margin          : 1.5%;
+                    width           : 45%;
+                    background-color: #FFFFFF;
+                    overflow        : hidden;
+
+                    >.pr-card-list-img {
+                        Object-fit: cover;
+                    }
+
+                    >.pr-card-list-txt {
+                        margin: 3% 5%;
+
+                        >div {
+                            float: left;
+
+                            >h3 {
+                                font-weight: 500;
+                                font-size  : 20px;
+                                line-height: 24px;
+                            }
+
+                            >p {
+                                font-weight: 300;
+                                font-size  : 14px;
+                                line-height: 24px;
+                            }
+                        }
+
+                        >.pr-fas {
+                            float: right;
+
+                            >.fas {
+                                color : rgb(255, 183, 0);
+                                margin: 5px 0px;
+                            }
+                        }
+
+
+                        >.price {
+                            width          : 100%;
+                            height         : 8vh;
+                            color          : black;
+                            clear          : both;
+                            margin         : 5% 0px;
+                            display        : flex;
+                            justify-content: space-between;
+                            align-items    : flex-start;
+                            align-items    : center;
+
+
+                            >.pr-currencySymbol {
+                                font-size: 15px;
+                                display  : flex;
+
+                                >p {
+                                    margin-left   : 6%;
+                                    font-size     : 24px;
+                                    // line-height: 1.5em;
+                                }
+                            }
+
+                            >.pr-card-list-button {
+                                width           : 50px;
+                                height          : 50px;
+                                color           : white;
+                                background-color: black;
+                                border-radius   : 100%;
+                                border          : 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    // --------new手機--------------------------------------------------------------------------------------------------------
+    @media screen and (max-width:390px) {
+
+        .pr-home-new {
+            width: 100%;
+
+            >.pr-home-new-img-photo {
+                display: none;
+            }
+
+            >.pr-home-new-list {
+                width: 100%;
+
+                >.pr-card-new {
+                    >.pr-card-list {
+                        >.pr-card-list-txt {
+
+                            >div {
+
+
+                                >h3 {
+                                    font-weight: 500;
+                                    font-size  : 18px;
+                                    line-height: 1.3em;
+                                }
+
+                                >p {
+                                    font-size  : 12px;
+                                    line-height: 1.3em;
+                                }
+                            }
+
+                            >.pr-fas {
+                                float: left;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    // --------焦點推薦--------------------------------------------------------------------------------------------------------
+    @media screen and (min-width:391px) {
+        .pr-recommendation {
+            width           : 100%;
+            height          : 100vh;
+            background-color: white;
+
+            >h2 {
+                padding    : 6vh 0px;
+                font-size  : 36px;
+                text-align : center;
+                font-weight: 500;
+            }
+
+            >.pr-recommendation-a {
+                text-align : center;
+                font-size  : 18px;
+                line-height: 1.3em;
+                display:flex;
+                justify-content:center;
+
+                >div {
+                    margin: 0 4vw;
+                    color : rgb(153, 153, 153);;
+                }
+                >div:hover {
+                    margin: 0 4vw;
+                    color : black;
+                    cursor       : pointer;
+
+                }
+                >.active {
+                    margin: 0 4vw;
+                    color : black;
+                    cursor       : pointer;
+                }
+            }
+
+            >.pr-card-a-div {
+                text-align: center;
+
+                >a {
+                    color: black;
+
+                    >i {
+                        margin: 0px 10px;
+                    }
+                }
+            }
+        }
+
+        .pr-container {
+            margin         : 6vh auto;
+            width          : 95%;
+            height         : auto;
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+            flex-wrap      : wrap;
+
+            >.pr-card {
+                margin          : 10px;
+                width           : 23%;
+                height          : 56vh;
+                position        : relative;
+                background-color: rgb(232, 232, 232);
+                overflow        : hidden;
+
+                >.pr-img {
+                    width      : 100%;
+                    height     : 350px;
+                    // overflow: hidden;
+
+                    >img {
+                        width             : 100%;
+                        height            : 85%;
+                        Object-fit        : cover;
+                        // object-position: 50% 100%;
+                    }
+                }
+
+                >.pr-content {
+                    width           : 100%;
+                    height          : 80px;
+                    position        : absolute;
+                    bottom          : 0;
+                    background-color: rgb(153, 153, 153);
+                    transition      : 0.5s;
+                    padding-left    : 15px;
+                    padding-top     : 10px;
+
+
+                    >h4 {
+                        margin-top    : 5px;
+                        letter-spacing: 1px;
+                        color         : white;
+                        font-size     : 16px;
+                        line-height   : 1.3em;
+                        // text-align: justify;
+                    }
+
+                    >.pr-p {
+                        font-size: 14px;
+                        margin-right: 5px;
+                    }
+
+                    >.pr-p-p {
+                        font-size : 16px;
+                        display   : block;
+                        margin-top: 10px;
+                        font-weight: 300;
+                    }
+
+                    >p {
+                        display      : inline;
+                        // text-align: justify;
+                        line-height  : 1.3em;
+                        font-weight  : 500;
+                        font-size    : 24px;
+                        color        : rgba(255, 255, 255);
+                    }
+
+                    >.pr-card-button {
+                        position        : absolute;
+                        right           : 10px;
+                        top             : 25px;
+                        width           : 40px;
+                        height          : 40px;
+                        color           : white;
+                        background-color: black;
+                        border-radius   : 100%;
+                        border          : 0;
+                    }
+                }
+            }
+        }
+
+        .pr-card:hover .pr-content {
+            height: 140px;
+        }
+
+        .pr-sp-card {
+            display: none;
+        }
+    }
+
+    @media(max-width:390px) {
+        .pr-recommendation {
+            display: none;
+        }
+
+        .pr-sp-card {
+            width  : 100%;
+            padding: 0px 8%;
+
+
+            >.pr-sp-card-img {
+                width: 100%;
+
+                >img {
+                    width     : 100%;
+                    height    : 80vmin;
+                    Object-fit: cover;
+                }
+
+                >h3 {
+                    color      : rgb(255, 255, 255);
+                    font-size  : 20px;
+                    font-weight: 500;
+                    text-align : center;
+                    margin     : 2vh 0px;
+                }
+
+                >div {
+                    margin: 2vh 0px 7vh 0px;
+
+                    >a {
+                        margin          : auto;
+                        width           : 50%;
+                        display         : block;
+                        color           : rgb(255, 255, 255);
+                        padding         : 14px 30px;
+                        background-color: black;
+                        border          : 1px solid rgba(255, 255, 255, 1);
+                        border-radius   : 50px;
+                        font-size       : 18px;
+                        font-weight     : 500;
+                        line-height     : 22px;
+                        text-align      : center;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    // --------文章推薦--------------------------------------------------------------------------------------------------------
+    .pr-article {
+        width      : 100%;
+        margin     : 5vh opx;
+        display    : flex;
+        align-items: flex-start;
+
+        >.pr-article-img {
+            width: 100%;
+
+            >img {
+                width     : 100%;
+                object-fit: cover;
+            }
+        }
+
+        >.pr-article-p {
+            padding: 6vw;
+            width  : 100%;
+
+            >p {
+                color: rgb(255, 255, 255);
+            }
+
+            >span {
+                color         : rgba(5, 242, 242, 1);
+                font-size     : 14px;
+                font-weight   : 400;
+                line-height   : 17px;
+                letter-spacing: 0.175em;
+                text-align    : left;
+
+            }
+
+            >h2 {
+                color         : rgb(255, 255, 255);
+                font-size     : 48px;
+                font-weight   : 500;
+                line-height   : 58px;
+                letter-spacing: 0em;
+                text-align    : left;
+                margin        : 15px 0;
+            }
+
+            >.pr-article-p-div {
+                >p {
+                    margin-top : 3.5vh;
+                    color      : rgb(255, 255, 255);
+                    font-size  : 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    text-align : left;
+
+                }
+            }
+        }
+    }
+
+    // --------文章推薦手機版--------------------------------------------------------------------------------------------------------
+
+    @media screen and (max-width:390px) {
+        .pr-article {
+            display: block;
+        }
+    }
+
+
+}

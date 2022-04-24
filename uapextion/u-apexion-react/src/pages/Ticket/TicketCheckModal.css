@@ -1,0 +1,95 @@
+element.style {
+  background-color: none;
+}
+
+.back-view {
+  backdrop-filter: blur(10px);
+  transition: 1s ease-in-out;
+}
+
+.modal-content {
+  width: 600px;
+  height: 600px;
+  background: url('./img/modal.png') center center / cover no-repeat;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: -5px 5px 20px black;
+}
+
+.modal-header.ticket-check-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.modal-header.ticket-check-title h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.modal-header.ticket-check-title p {
+  font-size: 0.9rem;
+}
+
+.ticket-check-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-input {
+  height: 10%;
+  width: 50%;
+  font-size: 30px;
+}
+
+.ticket-check-footer {
+  display: flex;
+  justify-content: center;
+  border: 0;
+}
+
+.ticket-check-btn {
+  background-color: var(--main-color-02);
+  color: #000000;
+  width: fit-content;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  /* padding: 7px 0; */
+  position: relative;
+  cursor: pointer;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  background-color: '#05DBF2';
+  color: '#00002D';
+  text-decoration: none;
+}
+
+.ticket-check-btn::after {
+  content: '';
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 1px solid #093866;
+  border-radius: 15px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.ticket-check-btn:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border: 4px double white;
+}
+
+@media screen and (min-width: 576px) {
+  .modal-content {
+    min-height: 200px;
+  }
+}

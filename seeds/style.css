@@ -1,0 +1,790 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    /* width: 80%; */
+    margin: 0 auto;
+}
+
+.nav-bg {
+    width: 100%;
+    background-color: white;
+    padding: 0 3%;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    max-width: 1300px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+
+h1 {
+    /* width: 20%; */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 img {
+    width: 90px;
+}
+
+.logIn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/*nav樣式end*/
+.slider-bg {
+    margin: 0 auto;
+    background-color: #003232;
+}
+
+.slider-wrap {
+    max-width: 1300px;
+    overflow: hidden;
+    /* border: 10px solid red; */
+    background-color: #003232;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 400%;
+    background-color: #003232;
+    /* animation: slider 10s infinite; */
+}
+
+.banner {
+    width: 25%;
+    display: inline-block;
+    margin-right: -4px;
+    ;
+}
+
+@keyframes slider {
+    0% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%
+    }
+
+    50% {
+        margin-left: -200%
+    }
+
+    75% {
+        margin-left: -300%
+    }
+
+    100% {
+        margin-left: -300%
+    }
+}
+
+/*description樣式begin*/
+.description {
+    width: 100%;
+    padding: 5%;
+    /* border: 1px solid red; */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #003232;
+}
+
+.description-title {
+    display: flex;
+    justify-content: center;
+}
+
+.description h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 1%;
+}
+
+.description-content {
+    position: relative;
+    padding-top: 5%;
+}
+
+.description h3 {
+    font-size: 2rem;
+    text-align: center;
+    /* border: 1px solid blue; */
+    line-height: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.description-img {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+    margin: 0 auto;
+}
+
+.description p {
+    margin-top: 8%;
+    /* border: 1px solid red; */
+}
+
+/*description樣式end*/
+/*card樣式begin*/
+.card-bg {
+    width: 100%;
+    background: url(./images/lessonBg.png) center center;
+}
+
+.card-wrap {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4% 0;
+}
+
+.card-wrap h2,
+.blog-wrap h2 {
+    /* margin: 5% 0; */
+    font-size: 3rem;
+    font-weight: bold;
+    color: #003232;
+    margin-right: 1%;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-list {
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4% auto;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+
+.card {
+    width: 24%;
+    /* border: 1px solid pink; */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 5px gray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+
+}
+
+.card-list-wrap {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.card-header {
+    position: relative;
+    /* border: 1px solid orange; */
+}
+
+.tag {
+    height: 40px;
+    position: absolute;
+    left: 8%;
+    bottom: -20px;
+    background-color: #e1915c;
+    color: white;
+    font-size: 1.6rem;
+    padding: 4% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body {
+    width: 100%;
+    padding: 15% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    /* border: 1px solid rgb(194, 22, 247); */
+    position: relative;
+    flex: auto;
+}
+
+.card-body h3 {
+    font-size: 2.3rem;
+    /* border: 1px solid red; */
+    margin-bottom: 45%;
+    width: 100%;
+}
+
+.card-people {
+    width: 80%;
+    /* border: 1px solid blue; */
+    margin: 60px 0;
+    position: absolute;
+    bottom: 0px;
+}
+
+.card-people p {
+    color: rgb(131, 130, 130);
+    font-size: 1.6rem;
+}
+
+.card-people ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.card-people ul li:first-child p {
+    color: #e1915c;
+
+}
+
+.card-people ul li:last-child {
+    color: rgb(131, 130, 130);
+}
+
+.card-body h3:last-child {
+    margin-top: 10%;
+}
+
+.line {
+    width: 100%;
+    height: 8px;
+    background-color: #e1915c;
+    border-radius: 30px;
+    margin-top: 5%;
+}
+
+.card-price {
+    /* border: 1px solid green; */
+    position: absolute;
+    bottom: 0;
+}
+
+.card-price ul {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-price li:first-child {
+    margin-right: 5%;
+}
+
+.card-price ul li:first-child p {
+    color: #e1915c;
+    font-size: 2.6rem;
+}
+
+.card-price ul li:last-child p {
+    color: rgb(131, 130, 130);
+    font-size: 1.6rem;
+    text-decoration: line-through;
+}
+
+.card-price>p {
+    font-size: 1.6rem;
+    color: #e1915c;
+}
+
+.card-info {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    position: relative;
+    bottom: 0;
+}
+
+.info-pic {
+    width: 15%;
+    margin-right: 8%;
+}
+
+.info-title {
+    text-align: left;
+}
+
+.info-title p {
+    font-size: 1.6rem;
+}
+
+.info-title p:last-child {
+    color: rgb(131, 130, 130);
+}
+
+/*募資成功card3樣式begin*/
+.card3 .tag {
+    background-color: #56af9f;
+}
+
+.card3 .card-people ul li:first-child p {
+    color: #56af9f;
+}
+
+.card3 .line {
+    background-color: #56af9f;
+}
+
+.card3 .card-price ul li:first-child p {
+    color: #56af9f;
+}
+
+.card3 .card-price>p {
+    color: #56af9f;
+}
+
+/*募資成功card3樣式end*/
+/*立即上課 card-lesson樣式begin*/
+.card-lesson .card-people p:nth-child(2),
+.card-lesson .card-people p:nth-child(3) {
+    padding-top: 10px;
+}
+
+.card-lesson .line {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.card-lesson .tag {
+    background-color: #106772;
+}
+
+.card-lesson .card-price ul li:first-child p,
+.card-lesson .card-price>p {
+    color: #106772;
+}
+
+.card-footer:hover,
+.blog-footer:hover {
+    filter: brightness(1.1);
+}
+
+/*立即上課 card-lesson樣式end*/
+.card-footer p,
+.blog-footer p {
+    width: 280px;
+    height: 50px;
+    padding: 2.5% 2%;
+    background-color: white;
+    border-radius: 50px;
+    color: #55a08f;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-lesson i {
+    color: rgb(253, 212, 28);
+}
+
+/*card樣式end*/
+/*blog樣式begin*/
+.blog-bg {
+    background-color: #0e5450;
+    background-image: url(./images/lessonBg.png);
+}
+
+.blog-wrap {
+    width: 95%;
+    margin: 0 auto;
+    padding: 4% 0;
+    /* border: 1px solid red; */
+    max-width: 1300px;
+}
+
+.blog-wrap h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.blog-main {
+    width: 31%;
+    border-radius: 20px;
+    /* border: 1px solid green; */
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: auto;
+}
+
+article h3 {
+    font-size: 2.5rem;
+    color: rgb(71, 71, 71);
+    line-height: 1.3;
+}
+
+article p {
+    width: 100%;
+    color: rgb(156, 156, 156);
+    font-size: 1.6rem;
+    margin-top: 5%;
+    line-height: 1.5;
+}
+
+.blog-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 4% 0;
+}
+
+.blog-main footer {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid pink; */
+    padding: 5% 10%;
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 0;
+}
+
+.blog-main a {
+    color: #0e5450;
+    text-decoration: none;
+}
+
+.blog-main-mobile {
+    display: none;
+}
+
+/*blog樣式end*/
+/* footer樣式begin */
+.contact {
+    margin: 0 auto;
+    background-color: #003232;
+}
+
+.contact ul {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5% 10%;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact img {
+    width: 80px;
+}
+
+/* footer樣式end */
+/*手機顯示*/
+@media screen and (max-width:576px) {
+    html {
+        font-size: 6px;
+    }
+
+    /* 手機時導覽列begin */
+    nav {
+        height: 60px;
+        padding: 0 5%;
+    }
+
+    h1 img {
+        width: 80px;
+    }
+
+    .logIn {
+        width: 60px;
+        height: 30px;
+    }
+
+    /*手機時導覽列end */
+    /*手機description樣式begin*/
+    .description-title {
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .description-content h3 {
+        line-height: 2;
+        font-size: 2.5rem;
+    }
+
+    .description-content h3:first-child {
+        display: none;
+    }
+
+    .description-img div:nth-child(n+2) {
+        display: none;
+    }
+
+    /*手機description樣式end*/
+    /*手機card樣式begin*/
+    .card-title {
+        flex-direction: column;
+        margin: 5% 0;
+        line-height: 1.5;
+    }
+
+    .card-list-wrap {
+        display: flex;
+        flex-direction: row;
+        padding: 5% 5% 0 0;
+        /* border: 1px solid orange; */
+    }
+
+    .card {
+        width: 95%;
+        margin: 5% auto 0 auto;
+    }
+
+    .card-header {
+        width: 80%;
+        position: static;
+        /* border: 1px solid blue; */
+    }
+
+    .tag {
+        height: 30px;
+        padding: 2% 4%;
+        left: 75%;
+        bottom: 8%;
+        /* border: 1px solid red; */
+    }
+
+    .card-body {
+        padding: 0 0 0 5%;
+    }
+
+    .card-body h3 {
+        margin-bottom: 60%;
+        line-height: 1.3;
+    }
+
+    .card-people {
+        margin: 30px 0;
+        width: 90%;
+        border: 0;
+    }
+
+    .card-price>p,
+    .card-price li:last-child p {
+        display: none;
+    }
+
+    .card-info {
+        padding: 3% 8% 3% 8%;
+    }
+
+    .info-pic {
+        margin: 5px;
+    }
+
+    .info-title {
+        display: flex;
+    }
+
+    .info-title p:first-child {
+        padding-right: 5px;
+    }
+
+    .card-footer,
+    .blog-footer {
+        margin: 10% 0 6% 0;
+    }
+
+    .card-footer p,
+    .blog-footer p {
+        font-size: 3rem;
+    }
+
+    /*手機card樣式end*/
+
+    /*手機blog樣式begin*/
+
+    .blog-bg {
+        padding: 0 8%;
+    }
+
+    .blog-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .blog-wrap h2 {
+        margin: 5% 0;
+        line-height: 1.5;
+    }
+
+    .blog-list {
+        width: 400%;
+        /* border: 1px solid red; */
+        overflow: hidden;
+        animation: mobile-blog 5s infinite;
+    }
+
+    .blog-main {
+        width: 100%;
+    }
+
+    .blog-main-mobile {
+        display: block;
+    }
+
+    article h3 {
+        font-size: 3rem;
+    }
+
+    article p{
+        font-size: 2.5rem;
+    }
+
+    .blog-main a {
+        font-size: 2.5rem;
+    }
+
+    @keyframes mobile-blog {
+        0% {
+            margin-left: 0;
+        }
+
+        25% {
+            margin-left: -100%;
+        }
+
+        50% {
+            margin-left: -200%;
+        }
+
+        75% {
+            margin-left: -300%;
+        }
+
+        100% {
+            margin-left: -300%;
+        }
+
+    }
+
+    /*手機blog樣式end*/
+    /*手機footer樣式begin*/
+    .contact {
+        height: auto;
+    }
+
+    .contact ul {
+        flex-direction: column;
+        padding-top: 8%;
+    }
+
+    .contact li {
+        padding-bottom: 8%;
+    }
+
+    .contact a {
+        font-size: 2.3rem;
+    }
+
+    /*手機footer樣式end*/
+}
+
+@media screen and (max-width:992px) and (min-width:574px) {
+    .description-title {
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .description h3 {
+        display: inline;
+    }
+    
+
+    .card-title {
+        flex-direction: column;
+        margin: 5% 0;
+        line-height: 1.5;
+    }
+
+    .card {
+        width: 49%;
+    }
+
+    .blog-main:nth-child(3) {
+        display: none;
+    }
+
+    .blog-main {
+        width: 49%;
+    }
+
+    .contact ul {
+        flex-wrap: wrap;
+    }
+
+    .contact ul li {
+        padding-bottom: 2%
+    }
+}
